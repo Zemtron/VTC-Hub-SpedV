@@ -190,13 +190,13 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/xElten/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/xElten/Best-README-Template/graphs/contributors
+[contributors-url]: https://github.com/xElten/VTC-Hub-SpedV/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/xElten/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/xElten/Best-README-Template/network/members
+[forks-url]: https://github.com/xElten/VTC-Hub-SpedV/network/members
 [stars-shield]: https://img.shields.io/github/stars/xElten/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/xElten/Best-README-Template/stargazers
+[stars-url]: https://github.com/xElten/VTC-Hub-SpedV/stargazers
 [issues-shield]: https://img.shields.io/github/issues/xElten/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/xElten/Best-README-Template/issues
+[issues-url]: https://github.com/xElten/VTC-Hub-SpedV/issues
 [license-shield]: https://img.shields.io/github/license/xElten/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/xElten/Best-README-Template/blob/master/LICENSE.txt
+[license-url]: https://github.com/xElten/VTC-Hub-SpedV/blob/master/LICENSE.txt
 [product-screenshot]: images/screenshot.png
