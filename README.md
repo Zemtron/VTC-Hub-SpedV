@@ -68,19 +68,7 @@
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-```sh
-git clone https://github.com/your_username_/Project-Name.git
-```
-3. Install NPM packages
-```sh
-npm install
-```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
-```
+
 
 
 
@@ -107,7 +95,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Twitter: [@Elten78912524](https://twitter.com/Elten78912524) Discord: #7272
+Twitter: [@Elten78912524](https://twitter.com/Elten78912524) Discord: Elten#7272
 
 Project Link: [https://github.com/xElten/VTC-Hub-SpedV](https://github.com/xElten/VTC-Hub-SpedV)
 
