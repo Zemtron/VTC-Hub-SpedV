@@ -67,7 +67,7 @@
 
 
 ### Installation
-
+Um die SpedV Statistiken zu benutzen wird ein API-Key gebraucht, den du mit SpedV+ erstellen kannst
 
 
 
