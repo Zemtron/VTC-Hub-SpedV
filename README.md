@@ -36,7 +36,7 @@
 
 </p>
 
-![Test Image 1](images/Screenshot_1.png | width=100)
+![Test Image 1](https://github.com/xElten/VTC-Hub-SpedV/blob/master/images/Screenshot_1.png | width=50)
 ![Test Image 2](images/Screenshot_12.png)
 
 <!-- TABLE OF CONTENTS -->
