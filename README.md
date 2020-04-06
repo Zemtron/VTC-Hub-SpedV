@@ -88,6 +88,7 @@ Admin Account: Username: Admin Passwort: 123
 - [ ] RSS-Feed Seite
 - [ ] Pofilseite
 - [ ] Wartunsübersicht (SpedV)
+- [ ] und vieles mehr...
 
 
 <!-- LICENSE -->
