@@ -35,7 +35,7 @@
 
 
 </p>
-<img src="https://github.com/xElten/VTC-Hub-SpedV/blob/master/images/Screenshot_1.png" width="98">
+<img src="https://github.com/xElten/VTC-Hub-SpedV/blob/master/images/Screenshot_1.png" width="170">
 ![Test Image 2](images/Screenshot_12.png)
 
 <!-- TABLE OF CONTENTS -->
