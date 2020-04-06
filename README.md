@@ -32,7 +32,7 @@
   
 
   <h3 align="center"><b>VTC-Hub (SpedV)</b></h3>
-
+  Material Dashboard Dark Edition by www.creative-tim.com
 
 </p>
 <img src="https://github.com/xElten/VTC-Hub-SpedV/blob/master/images/Screenshot_1.png" width="655">
