@@ -37,7 +37,7 @@
 </p>
 <img src="https://github.com/xElten/VTC-Hub-SpedV/blob/master/images/Screenshot_1.png" width="655">
 <img src="https://github.com/xElten/VTC-Hub-SpedV/blob/master/images/Screenshot_12.png" width="655">
-
+<img src="https://github.com/xElten/VTC-Hub-SpedV/blob/master/images/Screenshot_2.png" width="655">
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
