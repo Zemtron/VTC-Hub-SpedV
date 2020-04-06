@@ -35,7 +35,7 @@
 
 
 </p>
-![test image size](/images/Screenshot_1.png){:height="50%" width="50%"}
+![test image size](images/Screenshot_1.png){:height="50%" width="50%"}
 ![Test Image 2](images/Screenshot_12.png)
 
 <!-- TABLE OF CONTENTS -->
