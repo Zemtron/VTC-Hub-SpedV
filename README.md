@@ -82,7 +82,11 @@
 
 
 <!-- CONTRIBUTING -->
-
+## ToDo
+- [ ] Adminbereich
+- [ ] RSS-Feed Seite
+- [ ] Pofilseite
+- [ ] Wartunsübersicht (SpedV)
 
 
 <!-- LICENSE -->
