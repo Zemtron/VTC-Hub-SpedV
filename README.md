@@ -70,7 +70,7 @@
 ### Installation
 Um die SpedV Statistiken zu benutzen wird ein API-Key gebraucht, den du mit SpedV+ erstellen kannst
 
-
+Admin Account: Username: Admin Passwort: 123
 
 
 <!-- USAGE EXAMPLES -->
