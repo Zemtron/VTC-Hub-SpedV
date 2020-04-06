@@ -37,7 +37,7 @@
 </p>
 
 ![Test Image 1](images/Screenshot_1.png)
-
+![Test Image 2](images/Screenshot_12.png)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
