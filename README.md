@@ -36,6 +36,7 @@
 
 </p>
 
+![Test Image 1](images/Screenshot_1.png)
 
 
 <!-- TABLE OF CONTENTS -->
