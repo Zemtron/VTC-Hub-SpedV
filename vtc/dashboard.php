@@ -149,34 +149,36 @@ if(!isset($_SESSION['username'])) {
                    <i class="material-icons">euro</i></i>
                   </div>
                   <p class="card-category">Speditionskonto</p>
-                  <h3 class="card-title"><div id="tes2"></div>
+                  <h3 class="card-title"><div id="api"></div>
                                                     <section></section>
                                                     <script>
-                                                        function getThem(selHeader, selSection, url) {
-                                                            function populateHeader(jsonObj) {
-                                                                var myH1 = document.createElement('h1');
-                                                                myH1.textContent = jsonObj['squadName'];
-                                                                header.appendChild(myH1);
-                                                                var myPara = document.createElement('p');
-                                                                myPara.textContent = '' + jsonObj.result[0].Money
-                                                                header.appendChild(myPara);
-                                                            }
-                                                            var header = document.querySelector(selHeader);
-                                                            var section = document.querySelector(selSection);
-                                                            var requestURL = url;
-                                                            var request = new XMLHttpRequest();
-                                                            request.open('GET', requestURL);
-                                                            request.responseType = 'json';
-                                                            request.send();
-                                                            request.onload = function () {
-                                                                var superHeroes = request.response;
-                                                                populateHeader(superHeroes);
-                                                                // showHeroes(superHeroes);
-                                                            }
-                                                        }
-                                                        getThem('#tes2', 'section', 'https://api.sped-v.de/rest/api?function=getspedmoney&apikey=YOUR-API-KEY')
-                                                      
-                                                        </script></h1>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[0].Money
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getspedmoney.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#api', 'section'/*, 'apikeyhier'*/)
+    </script></h1>
                  
                   </h3>
                 </div>
@@ -195,34 +197,36 @@ if(!isset($_SESSION['username'])) {
                     <i class="material-icons">monetization_on</i>
                   </div>
                   <p class="card-category">Speditionskonto</p>
-                  <h3 class="card-title"><div id="tes3"></div>
-                                                        <section></section>
-                                                        <script>
-                                                            function getThem(selHeader, selSection, url) {
-                                                                function populateHeader(jsonObj) {
-                                                                    var myH1 = document.createElement('h1');
-                                                                    myH1.textContent = jsonObj['squadName'];
-                                                                    header.appendChild(myH1);
-                                                                    var myPara = document.createElement('p');
-                                                                    myPara.textContent = '' + jsonObj.result[1].Money
-                                                                    header.appendChild(myPara);
-                                                                }
-                                                                var header = document.querySelector(selHeader);
-                                                                var section = document.querySelector(selSection);
-                                                                var requestURL = url;
-                                                                var request = new XMLHttpRequest();
-                                                                request.open('GET', requestURL);
-                                                                request.responseType = 'json';
-                                                                request.send();
-                                                                request.onload = function () {
-                                                                    var superHeroes = request.response;
-                                                                    populateHeader(superHeroes);
-                                                                    // showHeroes(superHeroes);
-                                                                }
-                                                            }
-                                                            getThem('#tes3', 'section', 'https://api.sped-v.de/rest/api?function=getspedmoney&apikey=YOUR-API-KEY')
-                                                          
-                                                            </script></h1>
+                  <h3 class="card-title"><div id="api1"></div>
+                                                    <section></section>
+                                                    <script>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[1].Money
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getspedmoney.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#api1', 'section'/*, 'apikeyhier'*/)
+    </script></h1>
                                                             
                 </div>
                 <div class="card-footer">
@@ -239,34 +243,36 @@ if(!isset($_SESSION['username'])) {
                     <i class="material-icons">insert_invitation</i>
                   </div>
                   <p class="card-category">Speditionsziel</p>
-                  <h3 class="card-title"><Strong><div id="tes4"></div>
+                  <h3 class="card-title"><div id="api2"></div>
                                                     <section></section>
                                                     <script>
-                                                        function getThem(selHeader, selSection, url) {
-                                                            function populateHeader(jsonObj) {
-                                                                var myH1 = document.createElement('h1');
-                                                                myH1.textContent = jsonObj['squadName'];
-                                                                header.appendChild(myH1);
-                                                                var myPara = document.createElement('p');
-                                                                myPara.textContent = '' + jsonObj.result[0].Moneyamount
-                                                                header.appendChild(myPara);
-                                                            }
-                                                            var header = document.querySelector(selHeader);
-                                                            var section = document.querySelector(selSection);
-                                                            var requestURL = url;
-                                                            var request = new XMLHttpRequest();
-                                                            request.open('GET', requestURL);
-                                                            request.responseType = 'json';
-                                                            request.send();
-                                                            request.onload = function () {
-                                                                var superHeroes = request.response;
-                                                                populateHeader(superHeroes);
-                                                                // showHeroes(superHeroes);
-                                                            }
-                                                        }
-                                                        getThem('#tes4', 'section', 'https://api.sped-v.de/rest/api?function=getspedtargets&apikey=YOUR-API-KEY')
-                                                      
-                                                        </script></Strong>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[0].Moneyamount
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getspedtargets.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#api2', 'section'/*, 'apikeyhier'*/)
+    </script></h1>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -282,34 +288,36 @@ if(!isset($_SESSION['username'])) {
                     <i class="material-icons">format_line_spacing</i>
                   </div>
                   <p class="card-category">Gefahrene Auftr&auml;ge</p>
-                  <h3 class="card-title"><div id="tes5"></div>
+                  <h3 class="card-title"><div id="api3"></div>
                                                     <section></section>
                                                     <script>
-                                                        function getThem(selHeader, selSection, url) {
-                                                            function populateHeader(jsonObj) {
-                                                                var myH1 = document.createElement('h1');
-                                                                myH1.textContent = jsonObj['squadName'];
-                                                                header.appendChild(myH1);
-                                                                var myPara = document.createElement('p');
-                                                                myPara.textContent = '' + jsonObj.result.drivenTasks
-                                                                header.appendChild(myPara);
-                                                            }
-                                                            var header = document.querySelector(selHeader);
-                                                            var section = document.querySelector(selSection);
-                                                            var requestURL = url;
-                                                            var request = new XMLHttpRequest();
-                                                            request.open('GET', requestURL);
-                                                            request.responseType = 'json';
-                                                            request.send();
-                                                            request.onload = function () {
-                                                                var superHeroes = request.response;
-                                                                populateHeader(superHeroes);
-                                                                // showHeroes(superHeroes);
-                                                            }
-                                                        }
-                                                        getThem('#tes5', 'section', 'https://api.sped-v.de/rest/api?function=getspedstats&apikey=YOUR-API-KEY')
-                                                      
-                                                        </script></Strong></h3>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result.drivenTasks
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getspedstats.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#api3', 'section'/*, 'apikeyhier'*/)
+    </script></h1>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -456,383 +464,26 @@ if(!isset($_SESSION['username'])) {
                                         
                     
                     
-                    <section></section>
-                              <script>
-                                  function getThem(selHeader, selSection, url) {
-                                      function populateHeader(jsonObj) {
-                                          var myH1 = document.createElement('h1');
-                                          myH1.textContent = jsonObj['squadName'];
-                                          header.appendChild(myH1);
-                                          var myPara = document.createElement('p');
-                                          myPara.textContent = '' + jsonObj.result[0][0].Value.UserName;
-                                          header.appendChild(myPara);
-                                      }
-                                      var header = document.querySelector(selHeader);
-                                      var section = document.querySelector(selSection);
-                                      var requestURL = url;
-                                      var request = new XMLHttpRequest();
-                                      request.open('GET', requestURL);
-                                      request.responseType = 'json';
-                                      request.send();
-                                      request.onload = function () {
-                                          var superHeroes = request.response;
-                                          populateHeader(superHeroes);
-                                          // showHeroes(superHeroes);
-                                      }
-                                  }
-                                  getThem('#table10', 'section', 'https://api.sped-v.de/rest/api?apikey=YOUR-API-KEY&function=getonlineusers')
-                                
-                                
-                               </script>
-                               <section></section>
-                                        <script>               
-                              
-                              
-                              
-                                  function getThem(selHeader, selSection, url) {
-                                      function populateHeader(jsonObj) {
-                                          var myH1 = document.createElement('h1');
-                                          myH1.textContent = jsonObj['squadName'];
-                                          header.appendChild(myH1);
-                                          var myPara = document.createElement('p');
-                                          myPara.textContent = '' + jsonObj.result[1][0].Value.UserName;
-                                          header.appendChild(myPara);
-                                      }
-                                      var header = document.querySelector(selHeader);
-                                      var section = document.querySelector(selSection);
-                                      var requestURL = url;
-                                      var request = new XMLHttpRequest();
-                                      request.open('GET', requestURL);
-                                      request.responseType = 'json';
-                                      request.send();
-                                      request.onload = function () {
-                                          var superHeroes = request.response;
-                                          populateHeader(superHeroes);
-                                          // showHeroes(superHeroes);
-                                      }
-                                  }
-                                  getThem('#table10', 'section', 'https://api.sped-v.de/rest/api?apikey=YOUR-API-KEY&function=getonlineusers')
-                                
-                                
-                                  </script>
-                                  
-                                  </tbody>
-                                  </table>
-                  
-                                </div>
-                              </div>
-                              <section></section>
-                                        <script>               
-                              
-                              
-                              
-                                  function getThem(selHeader, selSection, url) {
-                                      function populateHeader(jsonObj) {
-                                          var myH1 = document.createElement('h1');
-                                          myH1.textContent = jsonObj['squadName'];
-                                          header.appendChild(myH1);
-                                          var myPara = document.createElement('p');
-                                          myPara.textContent = '' + jsonObj.result[2][0].Value.UserName;
-                                          header.appendChild(myPara);
-                                      }
-                                      var header = document.querySelector(selHeader);
-                                      var section = document.querySelector(selSection);
-                                      var requestURL = url;
-                                      var request = new XMLHttpRequest();
-                                      request.open('GET', requestURL);
-                                      request.responseType = 'json';
-                                      request.send();
-                                      request.onload = function () {
-                                          var superHeroes = request.response;
-                                          populateHeader(superHeroes);
-                                          // showHeroes(superHeroes);
-                                      }
-                                  }
-                                  getThem('#table10', 'section', 'https://api.sped-v.de/rest/api?apikey=YOUR-API-KEY&function=getonlineusers')
-                                
-                                
-                                  </script>
-                                  
-                                  </tbody>
-                                  </table>
-                  
-                                </div>
-                              </div>
-                              <section></section>
-                                        <script>               
-                              
-                              
-                              
-                                  function getThem(selHeader, selSection, url) {
-                                      function populateHeader(jsonObj) {
-                                          var myH1 = document.createElement('h1');
-                                          myH1.textContent = jsonObj['squadName'];
-                                          header.appendChild(myH1);
-                                          var myPara = document.createElement('p');
-                                          myPara.textContent = '' + jsonObj.result[3][0].Value.UserName;
-                                          header.appendChild(myPara);
-                                      }
-                                      var header = document.querySelector(selHeader);
-                                      var section = document.querySelector(selSection);
-                                      var requestURL = url;
-                                      var request = new XMLHttpRequest();
-                                      request.open('GET', requestURL);
-                                      request.responseType = 'json';
-                                      request.send();
-                                      request.onload = function () {
-                                          var superHeroes = request.response;
-                                          populateHeader(superHeroes);
-                                          // showHeroes(superHeroes);
-                                      }
-                                  }
-                                  getThem('#table10', 'section', 'https://api.sped-v.de/rest/api?apikey=YOUR-API-KEY&function=getonlineusers')
-                                
-                                
-                                  </script>
-                                  
-                                  </tbody>
-                                  </table>
-                  
-                                </div>
-                              </div>
-                              <section></section>
-                                        <script>               
-                              
-                              
-                              
-                                  function getThem(selHeader, selSection, url) {
-                                      function populateHeader(jsonObj) {
-                                          var myH1 = document.createElement('h1');
-                                          myH1.textContent = jsonObj['squadName'];
-                                          header.appendChild(myH1);
-                                          var myPara = document.createElement('p');
-                                          myPara.textContent = '' + jsonObj.result[4][0].Value.UserName;
-                                          header.appendChild(myPara);
-                                      }
-                                      var header = document.querySelector(selHeader);
-                                      var section = document.querySelector(selSection);
-                                      var requestURL = url;
-                                      var request = new XMLHttpRequest();
-                                      request.open('GET', requestURL);
-                                      request.responseType = 'json';
-                                      request.send();
-                                      request.onload = function () {
-                                          var superHeroes = request.response;
-                                          populateHeader(superHeroes);
-                                          // showHeroes(superHeroes);
-                                      }
-                                  }
-                                  getThem('#table10', 'section', 'https://api.sped-v.de/rest/api?apikey=YOUR-API-KEY&function=getonlineusers')
-                                
-                                
-                                  </script>
-                                  
-                                  </tbody>
-                                  </table>
-                  
-                                </div>
-                              </div>
-                              <section></section>
-                                        <script>               
-                              
-                              
-                              
-                                  function getThem(selHeader, selSection, url) {
-                                      function populateHeader(jsonObj) {
-                                          var myH1 = document.createElement('h1');
-                                          myH1.textContent = jsonObj['squadName'];
-                                          header.appendChild(myH1);
-                                          var myPara = document.createElement('p');
-                                          myPara.textContent = '' + jsonObj.result[5][0].Value.UserName;
-                                          header.appendChild(myPara);
-                                      }
-                                      var header = document.querySelector(selHeader);
-                                      var section = document.querySelector(selSection);
-                                      var requestURL = url;
-                                      var request = new XMLHttpRequest();
-                                      request.open('GET', requestURL);
-                                      request.responseType = 'json';
-                                      request.send();
-                                      request.onload = function () {
-                                          var superHeroes = request.response;
-                                          populateHeader(superHeroes);
-                                          // showHeroes(superHeroes);
-                                      }
-                                  }
-                                  getThem('#table10', 'section', 'https://api.sped-v.de/rest/api?apikey=YOUR-API-KEY&function=getonlineusers')
-                                
-                                
-                                  </script>
-                                  
-                                  </tbody>
-                                  </table>
-                  
-                                </div>
-                              </div>
-                              <section></section>
-                                        <script>               
-                              
-                              
-                              
-                                  function getThem(selHeader, selSection, url) {
-                                      function populateHeader(jsonObj) {
-                                          var myH1 = document.createElement('h1');
-                                          myH1.textContent = jsonObj['squadName'];
-                                          header.appendChild(myH1);
-                                          var myPara = document.createElement('p');
-                                          myPara.textContent = '' + jsonObj.result[6][0].Value.UserName;
-                                          header.appendChild(myPara);
-                                      }
-                                      var header = document.querySelector(selHeader);
-                                      var section = document.querySelector(selSection);
-                                      var requestURL = url;
-                                      var request = new XMLHttpRequest();
-                                      request.open('GET', requestURL);
-                                      request.responseType = 'json';
-                                      request.send();
-                                      request.onload = function () {
-                                          var superHeroes = request.response;
-                                          populateHeader(superHeroes);
-                                          // showHeroes(superHeroes);
-                                      }
-                                  }
-                                  getThem('#table10', 'section', 'https://api.sped-v.de/rest/api?apikey=YOUR-API-KEY&function=getonlineusers')
-                                
-                                
-                                  </script>
-                                  
-                                  </tbody>
-                                  </table>
-                  
-                                </div>
-                              </div>
-                              <section></section>
-                                        <script>               
-                              
-                              
-                              
-                                  function getThem(selHeader, selSection, url) {
-                                      function populateHeader(jsonObj) {
-                                          var myH1 = document.createElement('h1');
-                                          myH1.textContent = jsonObj['squadName'];
-                                          header.appendChild(myH1);
-                                          var myPara = document.createElement('p');
-                                          myPara.textContent = '' + jsonObj.result[7][0].Value.UserName;
-                                          header.appendChild(myPara);
-                                      }
-                                      var header = document.querySelector(selHeader);
-                                      var section = document.querySelector(selSection);
-                                      var requestURL = url;
-                                      var request = new XMLHttpRequest();
-                                      request.open('GET', requestURL);
-                                      request.responseType = 'json';
-                                      request.send();
-                                      request.onload = function () {
-                                          var superHeroes = request.response;
-                                          populateHeader(superHeroes);
-                                          // showHeroes(superHeroes);
-                                      }
-                                  }
-                                  getThem('#table10', 'section', 'https://api.sped-v.de/rest/api?apikey=YOUR-API-KEY&function=getonlineusers')
-                                
-                                
-                                  </script>
-                                  
-                                  </tbody>
-                                  </table>
-                  
-                                </div>
-                              </div>
-                              <section></section>
-                              <script>               
                     
-                    
-                    
-                        function getThem(selHeader, selSection, url) {
-                            function populateHeader(jsonObj) {
-                                var myH1 = document.createElement('h1');
-                                myH1.textContent = jsonObj['squadName'];
-                                header.appendChild(myH1);
-                                var myPara = document.createElement('p');
-                                myPara.textContent = '' + jsonObj.result[8][0].Value.UserName;
-                                header.appendChild(myPara);
-                            }
-                            var header = document.querySelector(selHeader);
-                            var section = document.querySelector(selSection);
-                            var requestURL = url;
-                            var request = new XMLHttpRequest();
-                            request.open('GET', requestURL);
-                            request.responseType = 'json';
-                            request.send();
-                            request.onload = function () {
-                                var superHeroes = request.response;
-                                populateHeader(superHeroes);
-                                // showHeroes(superHeroes);
-                            }
-                        }
-                        getThem('#table10', 'section', 'https://api.sped-v.de/rest/api?apikey=YOUR-API-KEY&function=getonlineusers')
-                      
-                      
-                        </script>
-                        
-                        </tbody>
-                        </table>
-        
-                      </div>
-                    </div>
-                    <section></section>
-                    <script>               
-          
-          
-          
-              function getThem(selHeader, selSection, url) {
-                  function populateHeader(jsonObj) {
-                      var myH1 = document.createElement('h1');
-                      myH1.textContent = jsonObj['squadName'];
-                      header.appendChild(myH1);
-                      var myPara = document.createElement('p');
-                      myPara.textContent = '' + jsonObj.result[9][0].Value.UserName;
-                      header.appendChild(myPara);
-                  }
-                  var header = document.querySelector(selHeader);
-                  var section = document.querySelector(selSection);
-                  var requestURL = url;
-                  var request = new XMLHttpRequest();
-                  request.open('GET', requestURL);
-                  request.responseType = 'json';
-                  request.send();
-                  request.onload = function () {
-                      var superHeroes = request.response;
-                      populateHeader(superHeroes);
-                      // showHeroes(superHeroes);
-                  }
-              }
-              getThem('#table10', 'section', 'https://api.sped-v.de/rest/api?apikey=YOUR-API-KEY&function=getonlineusers')
-            
-            
-              </script>
-              
-              </tbody>
-              </table>
-              <section></section>
-              <script>               
-    
-    
-    
-        function getThem(selHeader, selSection, url) {
+                                                    <section></section>
+                                                    <script>
+                                                    function getThem(selHeader, selSection/*, url*/) {
             function populateHeader(jsonObj) {
                 var myH1 = document.createElement('h1');
                 myH1.textContent = jsonObj['squadName'];
                 header.appendChild(myH1);
                 var myPara = document.createElement('p');
-                myPara.textContent = '' + jsonObj.result[10][0].Value.UserName;
+                myPara.textContent = '' + jsonObj.result[0][0].Value.UserName
                 header.appendChild(myPara);
             }
             var header = document.querySelector(selHeader);
             var section = document.querySelector(selSection);
-            var requestURL = url;
+            // var requestURL = url;
             var request = new XMLHttpRequest();
-            request.open('GET', requestURL);
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getonlineusers.php');
             request.responseType = 'json';
             request.send();
             request.onload = function () {
@@ -841,10 +492,349 @@ if(!isset($_SESSION['username'])) {
                 // showHeroes(superHeroes);
             }
         }
-        getThem('#table10', 'section', 'https://api.sped-v.de/rest/api?apikey=YOUR-API-KEY&function=getonlineusers')
-      
-      
-        </script>
+        getThem('#table10', 'section'/*, 'apikeyhier'*/)
+    </script>
+                               <section></section>
+                                                    <script>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[1][0].Value.UserName
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getonlineusers.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#table10', 'section'/*, 'apikeyhier'*/)
+    </script>
+                                  
+                                  </tbody>
+                                  </table>
+                  
+                                </div>
+                              </div>
+                              <section></section>
+                                                    <script>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[2][0].Value.UserName
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getonlineusers.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#table10', 'section'/*, 'apikeyhier'*/)
+    </script>
+                                  
+                                  </tbody>
+                                  </table>
+                  
+                                </div>
+                              </div>
+                              <section></section>
+                                                    <script>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[3][0].Value.UserName
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getonlineusers.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#table10', 'section'/*, 'apikeyhier'*/)
+    </script>
+                                  
+                                  </tbody>
+                                  </table>
+                  
+                                </div>
+                              </div>
+                              <section></section>
+                                                    <script>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[4][0].Value.UserName
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getonlineusers.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#table10', 'section'/*, 'apikeyhier'*/)
+    </script>
+                                  
+                                  </tbody>
+                                  </table>
+                  
+                                </div>
+                              </div>
+                             <section></section>
+                                                    <script>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[5][0].Value.UserName
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getonlineusers.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#table10', 'section'/*, 'apikeyhier'*/)
+    </script>
+                                  
+                                  </tbody>
+                                  </table>
+                  
+                                </div>
+                              </div>
+                              <section></section>
+                                                    <script>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[6][0].Value.UserName
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getonlineusers.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#table10', 'section'/*, 'apikeyhier'*/)
+    </script>
+                                  
+                                  </tbody>
+                                  </table>
+                  
+                                </div>
+                              </div>
+                            <section></section>
+                                                    <script>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[7][0].Value.UserName
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getonlineusers.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#table10', 'section'/*, 'apikeyhier'*/)
+    </script>
+                                  
+                                  </tbody>
+                                  </table>
+                  
+                                </div>
+                              </div>
+                            <section></section>
+                                                    <script>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[8][0].Value.UserName
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getonlineusers.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#table10', 'section'/*, 'apikeyhier'*/)
+    </script>
+                        
+                        </tbody>
+                        </table>
+        
+                      </div>
+                    </div>
+                    <section></section>
+                                                    <script>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[9][0].Value.UserName
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getonlineusers.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#table10', 'section'/*, 'apikeyhier'*/)
+    </script>
+              
+              </tbody>
+              </table>
+             <section></section>
+                                                    <script>
+                                                    function getThem(selHeader, selSection/*, url*/) {
+            function populateHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = jsonObj['squadName'];
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = '' + jsonObj.result[10][0].Value.UserName
+                header.appendChild(myPara);
+            }
+            var header = document.querySelector(selHeader);
+            var section = document.querySelector(selSection);
+            // var requestURL = url;
+            var request = new XMLHttpRequest();
+            // Anstatt die API direkt zu lesen, rufen wir ein
+            // PHP-Skript auf dem eigenen Server auf
+            //request.open('GET', requestURL);
+            request.open('GET', 'getdata/getonlineusers.php');
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var superHeroes = request.response;
+                populateHeader(superHeroes);
+                // showHeroes(superHeroes);
+            }
+        }
+        getThem('#table10', 'section'/*, 'apikeyhier'*/)
+    </script>
         
         </tbody>
         </table>
