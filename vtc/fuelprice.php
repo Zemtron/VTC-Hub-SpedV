@@ -65,7 +65,7 @@ if(!isset($_SESSION['username'])) {
               <p>Convoys</p>
             </a>
           </li>
-          <li class="nav-item active ">
+          <li class="nav-item  ">
             <a class="nav-link" href="./truckersmp.php">
               <i class="material-icons">library_books</i>
               <p>TruckersMP Stats</p>
@@ -77,8 +77,13 @@ if(!isset($_SESSION['username'])) {
               <p>Niederlassung</p>
             </a>
           </li>
- 
-   
+          <li class="nav-item active">
+            <a class="nav-link" href="./fuelprice.php">
+              <i class="material-icons">bubble_chart</i>
+              <p>Tankpreise</p>
+            </a>
+          </li>
+
         </ul>
       </div>
     </div>
@@ -140,239 +145,45 @@ if(!isset($_SESSION['username'])) {
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-      <div class="card-deck-wrapper">
+  
+        
+
+</div>
+  <div class="card-deck-wrapper">
                                 <div class="card-deck">
-                                
-                              <div class="card mb-4">
-                                <div class="card-header">
-                                  <b><p class="text-muted">TruckersMP Stats</b>
-                                </div>
-                                <div class="card-body">
-                                  <table class="table">
-                                   <thead>
-                                      <tr>
-                                        <th colspan="4">Server: Simulation 1</th>
-                                     </tr></thead>
-                                      <tbody  id="table1">   
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-                              <div class="card mb-4">
-                                <div class="card-header">
-                                  <b><p class="text-muted">TruckersMP Stats</b>
-                                </div>
-                                <div class="card-body">
-                                  <table class="table">
-                                   <thead>
-                                      <tr>
-                                        <th colspan="4">Server: Simulation 2</th>
-                                      </tr></thead>
-                                      <tbody id="table2">   
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-                     
-                               
-                              <div class="card mb-4">
-                                <div class="card-header">
-                                  <b><p class="text-muted">TruckersMP Stats</b>
-                                </div>
-                                <div class="card-body">
-                                  <table class="table">
-                                   <thead>
-                                      <tr>
-                                        <th colspan="4">Server: [US] Simulation</th>
-                                      </tr></thead>
-                                      <tbody id="table3">   
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-                    
-                              <div class="card mb-4">
-                                <div class="card-header">
-                                  <b><p class="text-muted">TruckersMP Stats</b>
-                                </div>
-                                <div class="card-body">
-                                  <table class="table">
-                                   <thead>
-                                      <tr>
-                                        <th colspan="4">Server: Arcade</th>
-                                      </tr></thead>
-                                      <tbody id="table4">   
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-                    <div class="card mb-4 ">
-                                <div class="card-header">
-                                  <b><p class="text-muted">TruckersMP Stats</b>
-                                </div>
-                                <div class="card-body">
-                                  <table class="table">
-                                   <thead>
-                                      <tr>
-                                        <th colspan="4">EU Promods 1</th>
-                                      </tr></thead>
-                                      <tbody id="table5">   
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-                              
-                    
-                    
-                              
-                               
-                              <script>
-                         
-                         function getThem(id, url, a) {
-                      var request = new XMLHttpRequest();
-                      request.open("GET", url);
-                      request.responseType = "json";
-                      request.send();
-                      request.onload = function() {
-                        var jsonObj = request.response;
-                        var tbody = document.querySelector(id);
-                        var tr = document.createElement("tr");
-                        arra = [
-                          jsonObj.response[a].name,
-                          jsonObj.response[a].severity,
-                          jsonObj.response[a].players
-                        ];
-                        for (p = 0; p < arra.length; p++) {
-                          var td = document.createElement("td");
-                          
-                          if (p == arra.length - 1) {
-                            td.style.color = jsonObj.response[a].color;
-                          }
-                          td.textContent = arra[p];
-                          tr.appendChild(td);
-                        }
-                        tbody.appendChild(tr);
-                      };
-                    }
-                    const tableApis = [
-                      "https://api.truckyapp.com/v2/traffic/top?server=sim1&game=ets2",
-                      "https://api.truckyapp.com/v2/traffic/top?server=sim2&game=ets2",
-                      "https://api.truckyapp.com/v2/traffic/top?server=arc2&game=ets2",
-                      "https://api.truckyapp.com/v2/traffic/top?server=arc1&game=ets2",
-					  "https://api.truckyapp.com/v2/traffic/top?server=eupromods1&game=ets2",
-					  "https://api.truckyapp.com/v2/traffic/top?server=eupromods2&game=ets2",
-					  "https://api.truckyapp.com/v2/traffic/top?server=uspromods&game=ets2",
-					  "https://api.truckyapp.com/v2/traffic/top?server=eusim&game=ats",
-					  "https://api.truckyapp.com/v2/traffic/top?server=ussim&game=ats",
+                            <div class="card mb-4">
+<body>
+  <?php
+    $myData = file_get_contents("https://api.vtlog.net/v2/general/fuelprice");
+    $myObject = json_decode($myData);
+    $myObjectMap = $myObject->response;
+  ?>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Country</th>
+        <th scope="col">Price</th>
+		<th scope="col">Change Today</th>
+        <th scope="col">Price Tomorrow</th>
+   
+ 
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach($myObjectMap as $key => $item): ?>
+        <tr>
+          <td><strong><?PHP echo $item->country; ?></td>
+          <td><strong><p style="color:#26c6da";><?PHP echo $item->price; ?></td>
+		  <td><strong><p style="color:#26c6da";><?PHP echo $item->difference; ?></td>
+          <td><strong><p style="color:#26c6da";><?PHP echo $item->tomorrow; ?></td>
+          
+        </tr>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
 
 
-
-                    ];
-                    for (let table = 0; table < 9; ++table) {
-                      for (let a = 0; a < 6; a++) {
-                        getThem("#table" + (table + 1), tableApis[table], a);
-                      }
-                    }
-                          
-                  
-                          
-                    </script>
-					</div>
-					
-					<div class="card-deck-wrapper">
-                                <div class="card-deck">
-					<div class="card mb-4">
-                                <div class="card-header">
-                                  <b><p class="text-muted">TruckersMP Stats</b>
-                                </div>
-                                <div class="card-body">
-                                  <table class="table">
-                                   <thead>
-                                      <tr>
-                                        <th colspan="4">EU Promods 2</th>
-                                      </tr></thead>
-                                      <tbody id="table6">   
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-
-							  <div class="card mb-4">
-                                <div class="card-header">
-                                  <b><p class="text-muted">TruckersMP Stats</b>
-                                </div>
-                                <div class="card-body">
-                                  <table class="table">
-                                   <thead>
-                                      <tr>
-                                        <th colspan="4">US Promods</th>
-                                      </tr></thead>
-                                      <tbody id="table7">   
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-							   <div class="card mb-4 ">
-                                <div class="card-header">
-                                  <b><p class="text-muted">TruckersMP Stats</b>
-                                </div>
-                                <div class="card-body">
-                                  <table class="table">
-                                   <thead>
-                                      <tr>
-                                        <th colspan="4">ATS Simulation</th>
-                                      </tr></thead>
-                                      <tbody id="table8">   
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-							  <div class="card mb-4 ">
-                                <div class="card-header">
-                                  <b><p class="text-muted">TruckersMP Stats</b>
-                                </div>
-                                <div class="card-body">
-                                  <table class="table">
-                                   <thead>
-                                      <tr>
-                                        <th colspan="4">ATS US Simulation</th>
-                                      </tr></thead>
-                                      <tbody id="table9">   
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-
-
-                      
-
-
-
-                              <div class="card mb-4 ">
-                                <div class="card-header">
-                                  <b><p class="text-muted"></b>
-                                </div>
-                                <div class="card-body">
-                                  <table class="table">
-                                   <thead>
-                                      <tr>
-                                        <th colspan="4"></th>
-                                      </tr></thead>
-                                      <tbody id="table156">   
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-							  
-							 
-				
-                                </div>
-								                        
-        </tbody>
-        </table>
-
-      </div>
-    </div>
                           
                                                      
               
